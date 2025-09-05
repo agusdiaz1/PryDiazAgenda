@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(modificarContactos));
             this.panel1 = new System.Windows.Forms.Panel();
             this.trvContactos = new System.Windows.Forms.TreeView();
             this.btnModificar = new System.Windows.Forms.Button();
@@ -86,6 +87,7 @@
             this.btnModificar.TabIndex = 14;
             this.btnModificar.Text = "Modificar contacto";
             this.btnModificar.UseVisualStyleBackColor = false;
+            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
             // 
             // lblContacto
             // 
@@ -207,8 +209,10 @@
             this.BackColor = System.Drawing.Color.RosyBrown;
             this.ClientSize = new System.Drawing.Size(541, 428);
             this.Controls.Add(this.panel1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "modificarContactos";
             this.Text = "Modificar Contactos";
+            this.Load += new System.EventHandler(this.modificarContactos_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);

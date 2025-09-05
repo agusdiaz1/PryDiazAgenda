@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(agregarContactos));
             this.lblID = new System.Windows.Forms.Label();
             this.lblCategoria = new System.Windows.Forms.Label();
             this.lblNombre = new System.Windows.Forms.Label();
@@ -42,8 +43,8 @@
             this.txtApellido = new System.Windows.Forms.TextBox();
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnAgregar = new System.Windows.Forms.Button();
             this.trvContactos = new System.Windows.Forms.TreeView();
+            this.btnAgregar = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -182,6 +183,13 @@
             this.panel1.Size = new System.Drawing.Size(511, 401);
             this.panel1.TabIndex = 14;
             // 
+            // trvContactos
+            // 
+            this.trvContactos.Location = new System.Drawing.Point(255, 34);
+            this.trvContactos.Name = "trvContactos";
+            this.trvContactos.Size = new System.Drawing.Size(240, 348);
+            this.trvContactos.TabIndex = 15;
+            // 
             // btnAgregar
             // 
             this.btnAgregar.BackColor = System.Drawing.Color.MistyRose;
@@ -192,13 +200,7 @@
             this.btnAgregar.TabIndex = 14;
             this.btnAgregar.Text = "Agregar contacto";
             this.btnAgregar.UseVisualStyleBackColor = false;
-            // 
-            // trvContactos
-            // 
-            this.trvContactos.Location = new System.Drawing.Point(255, 34);
-            this.trvContactos.Name = "trvContactos";
-            this.trvContactos.Size = new System.Drawing.Size(240, 348);
-            this.trvContactos.TabIndex = 15;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
             // agregarContactos
             // 
@@ -207,8 +209,10 @@
             this.BackColor = System.Drawing.Color.RosyBrown;
             this.ClientSize = new System.Drawing.Size(540, 430);
             this.Controls.Add(this.panel1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "agregarContactos";
             this.Text = "Agregar Contactos";
+            this.Load += new System.EventHandler(this.agregarContactos_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);

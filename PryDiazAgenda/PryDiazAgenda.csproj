@@ -14,7 +14,7 @@
     <Deterministic>true</Deterministic>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
+    <PlatformTarget>x64</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -53,11 +53,18 @@
       <DependentUpon>agregarContactos.cs</DependentUpon>
     </Compile>
     <Compile Include="conexionBD.cs" />
+    <Compile Include="Contactos.cs" />
     <Compile Include="eliminarContactos.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="eliminarContactos.Designer.cs">
       <DependentUpon>eliminarContactos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="exportarContactos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="exportarContactos.Designer.cs">
+      <DependentUpon>exportarContactos.cs</DependentUpon>
     </Compile>
     <Compile Include="frmPrincipal.cs">
       <SubType>Form</SubType>
@@ -78,6 +85,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="eliminarContactos.resx">
       <DependentUpon>eliminarContactos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="exportarContactos.resx">
+      <DependentUpon>exportarContactos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmPrincipal.resx">
       <DependentUpon>frmPrincipal.cs</DependentUpon>
