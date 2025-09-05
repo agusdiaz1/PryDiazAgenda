@@ -45,7 +45,9 @@
             this.lblApellido = new System.Windows.Forms.Label();
             this.lblCorreo = new System.Windows.Forms.Label();
             this.lblTelefono = new System.Windows.Forms.Label();
+            this.dgvContactos = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvContactos)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -202,12 +204,21 @@
             this.lblTelefono.TabIndex = 5;
             this.lblTelefono.Text = "Telefono";
             // 
+            // dgvContactos
+            // 
+            this.dgvContactos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvContactos.Location = new System.Drawing.Point(529, 15);
+            this.dgvContactos.Name = "dgvContactos";
+            this.dgvContactos.Size = new System.Drawing.Size(255, 398);
+            this.dgvContactos.TabIndex = 18;
+            // 
             // modificarContactos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.RosyBrown;
-            this.ClientSize = new System.Drawing.Size(541, 428);
+            this.ClientSize = new System.Drawing.Size(796, 428);
+            this.Controls.Add(this.dgvContactos);
             this.Controls.Add(this.panel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "modificarContactos";
@@ -215,6 +226,7 @@
             this.Load += new System.EventHandler(this.modificarContactos_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvContactos)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -237,5 +249,6 @@
         private System.Windows.Forms.Label lblApellido;
         private System.Windows.Forms.Label lblCorreo;
         private System.Windows.Forms.Label lblTelefono;
+        private System.Windows.Forms.DataGridView dgvContactos;
     }
 }

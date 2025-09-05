@@ -17,6 +17,7 @@ namespace PryDiazAgenda
         {
             InitializeComponent();
             CargarTreeView();
+            conexion.listarContactos(dgvContactos);
         }
 
         private void btnModificar_Click(object sender, EventArgs e)
@@ -42,6 +43,7 @@ namespace PryDiazAgenda
                 conexion.ModificarContacto(ContactoModificado);
                 LimpiarCampos();
                 CargarTreeView();
+                conexion.listarContactos(dgvContactos);
             }
             catch (Exception ex)
             {

@@ -20,6 +20,7 @@ namespace PryDiazAgenda
         {
             InitializeComponent();
             CargarTreeView();
+            conexion.listarContactos(dgvContactos);
         }
 
         private void agregarContactos_Load(object sender, EventArgs e)
@@ -49,6 +50,7 @@ namespace PryDiazAgenda
                 conexion.AgregarContactos(nuevoContacto);
                 LimpiarCampos();
                 CargarTreeView();
+                conexion.listarContactos(dgvContactos);
             }
 
             catch (Exception ex)
@@ -95,6 +97,11 @@ namespace PryDiazAgenda
             txtApellido.Clear();
             txtCorreo.Clear();
             txtTelefono.Clear();
+        }
+
+        private void dgvContactos_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

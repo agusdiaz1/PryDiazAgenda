@@ -45,7 +45,9 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.trvContactos = new System.Windows.Forms.TreeView();
             this.btnAgregar = new System.Windows.Forms.Button();
+            this.dgvContactos = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvContactos)).BeginInit();
             this.SuspendLayout();
             // 
             // lblID
@@ -202,12 +204,22 @@
             this.btnAgregar.UseVisualStyleBackColor = false;
             this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
+            // dgvContactos
+            // 
+            this.dgvContactos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvContactos.Location = new System.Drawing.Point(529, 12);
+            this.dgvContactos.Name = "dgvContactos";
+            this.dgvContactos.Size = new System.Drawing.Size(223, 401);
+            this.dgvContactos.TabIndex = 18;
+            this.dgvContactos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvContactos_CellContentClick);
+            // 
             // agregarContactos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.RosyBrown;
-            this.ClientSize = new System.Drawing.Size(540, 430);
+            this.ClientSize = new System.Drawing.Size(764, 430);
+            this.Controls.Add(this.dgvContactos);
             this.Controls.Add(this.panel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "agregarContactos";
@@ -215,6 +227,7 @@
             this.Load += new System.EventHandler(this.agregarContactos_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvContactos)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -237,5 +250,6 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnAgregar;
         private System.Windows.Forms.TreeView trvContactos;
+        private System.Windows.Forms.DataGridView dgvContactos;
     }
 }
